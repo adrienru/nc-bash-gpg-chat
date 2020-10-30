@@ -6,6 +6,7 @@ This project created to have 1-1 encrypted chat between 2 Linux machines
 ``gpg``
 ``tmux``
 ``netcat``
+``base64``
 
 #### Example:
 In first terminal:
