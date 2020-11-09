@@ -1,9 +1,9 @@
 #!/bin/bash
 
-TMP_OUT=$1
-TMP_IN=$2
-PORT=$3
-HOST=$4
+TMP_OUT="$1"
+TMP_IN="$2"
+PORT="$3"
+HOST="$4"
 
 
 if (( $# != 4 )); then
