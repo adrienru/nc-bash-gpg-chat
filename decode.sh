@@ -7,12 +7,9 @@ if (( $# != 1 )); then
     exit 1
 fi
 
-#clear
-echo "There is will be decoded messages from $TMP_IN FIFO"
+clear
+echo -e "Here will be incoming message\n\n"
 
-echo "cat $TMP_IN | while read line; do
-    echo "'$line'" | base64 -d | gpg -d
-done"
 while true; do
     cat $TMP_IN | while read line; do echo $line | base64 -d | gpg -d; done 2> >(while read line; do echo -e "\e\033[37$line\e[0m" >&2; done) 1> >(while read line; do echo -e "\e\033[7m  $line  \e\033[0m"; done)
 done
