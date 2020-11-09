@@ -7,6 +7,7 @@ This project created to have 1-1 encrypted chat between 2 Linux machines
 ``tmux``
 ``netcat``
 ``base64``
+``torsocks``
 
 #### Example:
 In first terminal:
