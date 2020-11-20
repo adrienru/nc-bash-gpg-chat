@@ -10,13 +10,13 @@ This project created to have 1-1 encrypted chat between 2 Linux machines
 ``torsocks``
 
 #### Example:
-In first terminal:
+Firstly:
 ```bash
-./host_init.sh 8888 your_key
+./host_init.sh host_port client_key
 ```
-In second terminal:
+Secondly:
 ```
-./client_init.sh localhost 8888 your_key
+./client_init.sh host_addr host_port host_key
 ```
 ---
 Tested only on ArchLinux
