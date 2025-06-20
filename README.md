@@ -46,3 +46,28 @@ trust
 3. Luego:
 quit
 Responde y si pregunta guardar los cambios.
+
+iniciar hots:
+```
+./host_init.sh 1337 ed@chat.local
+```
+
+en cliente
+```
+./client_init.sh 100.72.157.52 1337 ed@chat.local
+```
+
+1. 📥 Copia secretkey.asc a la máquina destino
+Ejemplo: usando USB, scp, o simplemente descargándola si la tienes en la nube (con cuidado).
+
+2. 📂 Importa la clave secreta
+
+```
+gpg --import secretkey.asc
+```
+
+3. ✅ Verifica que se importó correctamente
+```
+gpg --list-secret-keys
+```
+
