@@ -22,7 +22,7 @@ tmux kill-session -t $session_name &>/dev/null
 tmux new -s $session_name -d
 tmux split-window -h -t $session_name
 tmux split-window -v -t $session_name:0.0
-tmux send-keys -t $session_name:0.1 "torify $SCRIPTPATH/client_nc.sh $TMP_OUT $TMP_IN $PORT $HOST" Enter
+tmux send-keys -t "$session_name:0.1" "\"$SCRIPTPATH/client_nc.sh\" \"$TMP_OUT\" \"$TMP_IN\" \"$PORT\" \"$HOST\"" Enter
 tmux send-keys -t $session_name:0.0 "$SCRIPTPATH/decode.sh $TMP_IN" Enter
 tmux send-keys -t $session_name:0.2 "$SCRIPTPATH/encode.sh $TMP_OUT $RECIP" Enter
 tmux select-pane -t $session_name:0.2
